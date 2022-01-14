@@ -1,0 +1,121 @@
+body {
+  background: pink;
+}
+
+
+
+.cat {
+  display: inline-block;
+margin:10px 15px;
+}
+
+.image {
+  /* border: 1px solid black; */
+  display: block;
+  width: 150px;
+}
+
+img {
+  width: 100%;
+}
+
+img:hover {
+  opacity: 0.7;
+
+}
+
+.name-category {
+  /* border: 1px solid black; */
+  display: block;
+
+}
+
+.name-category a {
+  display: block;
+
+}
+
+.name {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.name:hover {
+  color: red;
+}
+
+.cat-desc {
+  /* border: 1px solid black; */
+  display: block;
+  max-width: 250px;
+  float: right;
+
+}
+
+.cat-desc p {
+  margin-top: 0;
+  width: 100%;
+
+}
+
+
+
+
+
+input:checked~.all-cats .cat {
+  display: block;
+  width: 100%;
+
+}
+
+input:checked~.all-cats .cat::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+input:checked~.all-cats .cat .image {
+  display: inline-block;
+  vertical-align: top;
+
+}
+
+input:checked~.all-cats .cat .name-category {
+  display: inline-block;
+  vertical-align: top;
+
+}
+
+input:checked~.all-cats .cat .cat-desc {
+  display: inline-block;
+  vertical-align: top;
+float:right;
+}
+
+h5 {
+  margin: 5px 0;
+}
+
+
+.star{
+  display:none;
+}
+.rating:not(:checked) > label {
+
+	width: 42px;
+	padding: 0;
+	cursor: pointer;
+	font-size: 32px;
+	line-height: 32px;
+	color: gold;
+	text-shadow: 1px 1px #bbb;
+}
+
+.rating:not(:checked) > label::before{
+  content: '★';
+}
+
+.star:checked ~ label ~ label{
+  color:grey;
+}
